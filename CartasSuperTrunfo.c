@@ -39,7 +39,7 @@ int main() {
 
 
     //  Carta número 2
-    printf("\nCarta 02 !\n");
+    printf("\nCarta 02 !\n\n");
 
     printf("Digite a letra do seu estado: ");
     scanf(" %c", &estado1);  
@@ -97,13 +97,18 @@ int main() {
     printf("Densidade Populacional : %.1f habitantes \n", dpopulcao2);
     printf("PIB per Capita: %f\n\n", pibc2);
 
-    printf("\nComparação de Cartas:\n\n");
-    printf("População: Carta %d venceu \n", (populacao > populacao1));
-    printf("Área: Carta %d venceu \n", (area > area1));
-    printf("PIB: Carta %d venceu\n", (pib1 > pib2));
-    printf("Pontos Turísticos: Carta %d venceu\n", (locaisturisticos > locaisturisticos1));
-    printf("Densidade Populacional: Carta %d venceu\n", (dpopulcao1 < dpopulcao2));
-    printf("PIB per Capita: Carta %d venceu\n", (pibc1 > pibc2));
-    printf("Super Poder: Carta %d venceu \n", (superpoder1 > superpoder2));
+    printf("Comparação de cartas (Atributo: Locais turísticos):\n\n");
+    printf("Carta 1 Locais turísticos: %d\n", locaisturisticos);
+    printf("Carta 2 Locais turísticos: %d\n\n", locaisturisticos1);
+
+    if(locaisturisticos > locaisturisticos1) //Comparando as variaveis para tomar a decisão
+    {
+        printf("A carta numero 1 venceu ! com mais locais"); //Imprimir caso verdadeiro 
+    }
+    else
+    {
+        printf("A carta numero 2 venceu ! com mais locais"); //imprimir caso falso
+    }
+
     return 0;
 }
